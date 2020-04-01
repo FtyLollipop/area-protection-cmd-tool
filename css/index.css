@@ -18,16 +18,13 @@ html, body {
 }
 
 .logo {
-    /*height: 10%;*/
     width: 100%;
     text-align: center;
-    /*padding:0;*/
     font-size: 6vh;
     padding: 2% 0 0 0;
 }
 
 .form {
-    /*height: 25%;*/
     width: 100%;
     padding: 0;
     text-align: center;
@@ -48,7 +45,7 @@ html, body {
 }
 
 .check {
-    transform:scale(1.2);
+    transform: scale(1.2);
     font-size: 2vh;
 }
 
@@ -69,7 +66,6 @@ html, body {
 }
 
 .output {
-    /*height: 30%;*/
     width: 100%;
     padding: 0;
     text-align: center;
@@ -85,8 +81,8 @@ html, body {
 
 .copy {
     font-size: 1.9vh;
-    margin:0.7vh 0 0 0;
-    width:6%
+    margin: 0.7vh 0 0 0;
+    width: 6%
 }
 
 .a_hr {
@@ -110,9 +106,7 @@ html, body {
 }
 
 .tips {
-    /*height:30%;*/
     width: 90%;
-    /*padding:0;*/
     margin: 0 auto 0 auto;
     padding: 0 5% 2% 5%;
     font-size: 2vh;
@@ -120,15 +114,16 @@ html, body {
 }
 
 /*横屏*/
-@media screen and (orientation:landscape){
+@media screen and (orientation: landscape) {
 
 }
 
 /*竖屏*/
-@media screen and (orientation:portrait){
+@media screen and (orientation: portrait) {
     .form {
         font-size: 2.2vh;
     }
+
     .coordinate {
         font-size: 2.2vh;
         margin: 1vh;
@@ -140,9 +135,9 @@ html, body {
     }
 
     .check {
-        font-size:2.2vh;
-        transform:scale(2);
-        margin:2%;
+        font-size: 2.2vh;
+        transform: scale(2);
+        margin: 2%;
     }
 
     #calc, #reset {
@@ -170,8 +165,8 @@ html, body {
 
     .copy {
         font-size: 2.1vh;
-        width:14%;
-        margin:1vh 0 0 0;
+        width: 14%;
+        margin: 1vh 0 0 0;
     }
 
     .tips {
