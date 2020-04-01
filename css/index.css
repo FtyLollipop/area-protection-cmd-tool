@@ -88,7 +88,7 @@ html, body {
 .copy {
     font-size: 1.9vh;
     margin: 0.7vh 0 0 0;
-    width: 6%
+    width: 10vh;
 }
 
 .a_hr {
@@ -170,7 +170,7 @@ html, body {
 
     .copy {
         font-size: 2vh;
-        width: 14%;
+        width: 10vh;
         margin: 1vh 0 0 0;
     }
 
