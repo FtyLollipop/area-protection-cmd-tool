@@ -6,6 +6,7 @@ html, body {
     padding: 0;
     font-size: 0;
     user-select: none;
+    background-color: #c6eeff;
 }
 
 .bg {
@@ -56,12 +57,18 @@ html, body {
 
 .input_tip_yes, .copy_tip_yes {
     font-size: 2vh;
+    line-height: 100%;
     color: green;
+    padding: 0;
+    margin: 0.8vh 0 0.8vh 0;
 }
 
 .input_tip_no, .copy_tip_no {
     font-size: 2vh;
+    line-height: 100%;
     color: red;
+    padding: 0;
+    margin: 0.8vh 0 0.8vh 0;
 }
 
 .output {
