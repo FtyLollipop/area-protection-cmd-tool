@@ -26,10 +26,6 @@ html, body {
     padding: 2% 0 0 0;
 }
 
-.logo h1 {
-
-}
-
 .form {
     /*height: 25%;*/
     width: 100%;
@@ -42,24 +38,24 @@ html, body {
 .coordinate {
     width: 20%;
     font-size: 2vh;
-    margin: 3px;
+    margin: 0.7vh;
 }
 
 .whitelist {
     width: 43%;
     font-size: 2vh;
-    margin: 3px;
+    margin: 0.7vh;
 }
 
 .check {
+    transform:scale(1.2);
     font-size: 2vh;
-    margin: 3px;
 }
 
 #calc, #reset {
     width: 10%;
     font-size: 2vh;
-    margin: 5px;
+    margin: 0.7vh;
 }
 
 .input_tip_yes, .copy_tip_yes {
@@ -82,13 +78,15 @@ html, body {
 }
 
 .cmd_out {
-    width: 50%;
+    width: 45%;
     font-size: 2vh;
-    margin: 3px;
+    margin: 0.5vh;
 }
 
 .copy {
     font-size: 2vh;
+    margin:0.7vh 0 0 0;
+    width:6%
 }
 
 .a_hr {
@@ -119,4 +117,64 @@ html, body {
     padding: 0 5% 2% 5%;
     font-size: 2vh;
     background-color: #c6eeff;
+}
+
+/*横屏*/
+@media screen and (orientation:landscape){
+
+}
+
+/*竖屏*/
+@media screen and (orientation:portrait){
+    .form {
+        font-size: 2.2vh;
+    }
+    .coordinate {
+        font-size: 2.2vh;
+        margin: 1vh;
+    }
+
+    .whitelist {
+        font-size: 2.2vh;
+        margin: 1vh;
+    }
+
+    .check {
+        font-size:2.2vh;
+        transform:scale(2);
+        margin:2%;
+    }
+
+    #calc, #reset {
+        width: 20%;
+        font-size: 2.2vh;
+        margin: 1vh;
+    }
+
+    .input_tip_yes, .copy_tip_yes {
+        font-size: 2.2vh;
+    }
+
+    .input_tip_no, .copy_tip_no {
+        font-size: 2.2vh;
+    }
+
+    .output {
+        font-size: 2.2vh;
+    }
+
+    .cmd_out {
+        font-size: 2.2vh;
+        margin: 1vh;
+    }
+
+    .copy {
+        font-size: 2.2vh;
+        width:14%;
+        margin:1vh 0 0 0;
+    }
+
+    .tips {
+        font-size: 2.2vh;
+    }
 }
