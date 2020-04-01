@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    user-select: none;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    background-color: #c6eeff;
+    text-align: center;
+}
+
+.logo {
+    /*height: 10%;*/
+    width: 100%;
+    text-align: center;
+    /*padding:0;*/
+    font-size: 6vh;
+    padding: 2% 0 0 0;
+}
+
+.logo h1 {
+
+}
+
+.form {
+    /*height: 25%;*/
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    font-size: 2vh;
+    margin: 3% auto auto auto;
+}
+
+.coordinate {
+    width: 20%;
+    font-size: 2vh;
+    margin: 3px;
+}
+
+.whitelist {
+    width: 43%;
+    font-size: 2vh;
+    margin: 3px;
+}
+
+.check {
+    font-size: 2vh;
+    margin: 3px;
+}
+
+#calc, #reset {
+    width: 10%;
+    font-size: 2vh;
+    margin: 5px;
+}
+
+.input_tip_yes, .copy_tip_yes {
+    font-size: 2vh;
+    color: green;
+}
+
+.input_tip_no, .copy_tip_no {
+    font-size: 2vh;
+    color: red;
+}
+
+.output {
+    /*height: 30%;*/
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    font-size: 2vh;
+    margin: 0 auto auto auto;
+}
+
+.cmd_out {
+    width: 50%;
+    font-size: 2vh;
+    margin: 3px;
+}
+
+.copy {
+    font-size: 2vh;
+}
+
+.a_hr {
+    width: 55%;
+    padding: 0;
+    margin: 0 auto 0 auto;
+}
+
+.bottom_text, .top_text {
+    padding: 0;
+    font-size: 1.5vh;
+    color: #798288;
+}
+
+.top_text {
+    margin: 0 auto 1% auto;
+}
+
+.bottom_text {
+    margin: 1% auto 0 auto;
+}
+
+.tips {
+    /*height:30%;*/
+    width: 90%;
+    /*padding:0;*/
+    margin: 0 auto 0 auto;
+    padding: 0 5% 2% 5%;
+    font-size: 2vh;
+    background-color: #c6eeff;
+}

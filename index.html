@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>圈地命令生成器</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+    <div class="bg">
+        <div class="blank"></div>
+        <div class="logo">
+            圈地命令生成器
+        </div>
+        <div class="form" id="test">
+            <iframe id="rfFrame" name="rfFrame" src="about:blank" style="display:none;"></iframe>
+            <form id="input_form" action="" target="rfFrame" name="input">
+                <label for="start_x">起始x坐标: </label><input id="start_x" class="coordinate" type="number" step="1" min="-30000000" max="30000000">
+                <label for="start_z">起始z坐标: </label><input id="start_z" class="coordinate" type="number" step="1" min="-30000000" max="30000000">
+                <br/>
+                <label for="end_x">结束x坐标: </label><input id="end_x" class="coordinate" type="number" step="1" min="-30000000" max="30000000">
+                <label for="end_z">结束z坐标: </label><input id="end_z" class="coordinate" type="number" step="1" min="-30000000" max="30000000">
+                <br/>
+                <label for="whitelist">白名单(逗号隔开): </label><input class="whitelist" id="whitelist" type="text">
+                <br/>
+                <label>圈外游戏模式: </label>
+                <label>
+                    <input type="radio" class="check" name="out_mode" value="survival" checked="checked">
+                    生存
+                </label>
+                <label>
+                    <input type="radio" class="check" name="out_mode" value="creative">
+                    创造
+                </label>
+                <label>
+                    <input type="radio" class="check" name="out_mode" value="adventure">
+                    冒险
+                </label>
+                <br/>
+                <label>圈内游戏模式: </label>
+                <label>
+                    <input type="radio" class="check" name="in_mode" value="survival">
+                    生存
+                </label>
+                <label>
+                    <input type="radio" class="check" name="in_mode" value="creative">
+                    创造
+                </label>
+                <label>
+                    <input type="radio" class="check" name="in_mode" value="adventure" checked="checked">
+                    冒险
+                </label>
+                <br/>
+                <input id="calc" type="submit" value="生成" onclick="calc_click()">
+                <input id="reset" type="submit" value="重置" onclick="reset_click()">
+            </form>
+        </div>
+        <p class="input_tip_yes" id="input_tip"><br/></p>
+        <p class="bottom_text">输入</p>
+        <hr class="a_hr">
+        <p class="top_text">输出</p>
+        <p class="copy_tip_yes" id="copy_tip"><br/></p>
+        <div class="output" id="output_list">
+            <label for="command_1">命令1 </label><input class="cmd_out" id="command_1" readonly><input id="copy_1" class="copy" type="submit" value="复制" onclick="copy_click(this)"><br/>
+            <label for="command_2">命令2 </label><input class="cmd_out" id="command_2" readonly><input id="copy_2" class="copy" type="submit" value="复制" onclick="copy_click(this)"><br/>
+            <label for="command_3">命令3 </label><input class="cmd_out" id="command_3" readonly><input id="copy_3" class="copy" type="submit" value="复制" onclick="copy_click(this)"><br/>
+            <label for="command_4">命令4 </label><input class="cmd_out" id="command_4" readonly><input id="copy_4" class="copy" type="submit" value="复制" onclick="copy_click(this)"><br/>
+            <label for="command_5">命令5 </label><input class="cmd_out" id="command_5" readonly><input id="copy_5" class="copy" type="submit" value="复制" onclick="copy_click(this)"><br/>
+        </div>
+        <p class="bottom_text">输出</p>
+        <hr class="a_hr">
+        <p class="top_text">说明</p>
+        <div class="tips">
+            将生成的命令分别复制到5个激活的循环型命令方块中并保证任何人接近领地边界时这些命令方块可以被加载即可。<br/>
+        </div>
+    </div>
+</body>
+</html>
