@@ -25,6 +25,8 @@ function calc_click() {
     for (let i = 0; i < 4; i++)
         if (coordinates[i].value === "" || coordinates[i].value % 1 !== 0 || coordinates[i].value < -30000000 || coordinates[i].value > 30000000) {
             input_tip_set(0, "生成失败，坐标必填且必须为整数！");
+            for (let i = 0; i < 5; i++)
+                commands[i].value = "";
             return;
         }
 
