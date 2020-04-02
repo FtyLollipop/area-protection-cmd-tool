@@ -58,10 +58,10 @@ function calc_click() {
                 command_wl += (',name=!"' + wl[i] + '"');
     }
     commands[0].value = "/gamemode " + in_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + start_z + ",dx=" + dx + ",dy=65535,dz=" + dz + ",m=!" + in_mode + command_wl + "]";
-    commands[1].value = "/gamemode " + out_mode + " @e[type=player,x=" + (parseInt(start_x) - 1).toString() + ",y=0,z=" + (parseInt(start_z) - 1).toString() + ",dx=0,dy=65535,dz=" + dz + ",m=!" + out_mode + command_wl + "]";
-    commands[2].value = "/gamemode " + out_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + (parseInt(start_z) - 1).toString() + ",dx=" + dx + ",dy=65535,dz=0,m=!" + out_mode + command_wl + "]";
-    commands[3].value = "/gamemode " + out_mode + " @e[type=player,x=" + (parseInt(start_x) + dx + 1).toString() + ",y=0,z=" + start_z + ",dx=0,dy=65535,dz=" + dz + ",m=!" + out_mode + command_wl + "]";
-    commands[4].value = "/gamemode " + out_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + (parseInt(start_z) + dz + 1).toString() + ",dx=" + dx + ",dy=65535,dz=0,m=!" + out_mode + command_wl + "]";
+    commands[1].value = "/gamemode " + out_mode + " @e[type=player,x=" + (parseInt(start_x) - 1).toString() + ",y=0,z=" + (parseInt(start_z) - 1).toString() + ",dx=0,dy=65535,dz=" + (parseInt(dz) + 1).toString + ",m=!" + out_mode + command_wl + "]";
+    commands[2].value = "/gamemode " + out_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + (parseInt(start_z) - 1).toString() + ",dx=" + (parseInt(dx) + 1).toString + ",dy=65535,dz=0,m=!" + out_mode + command_wl + "]";
+    commands[3].value = "/gamemode " + out_mode + " @e[type=player,x=" + (parseInt(start_x) + dx + 1).toString() + ",y=0,z=" + start_z + ",dx=0,dy=65535,dz=" + (parseInt(dz) + 1).toString + ",m=!" + out_mode + command_wl + "]";
+    commands[4].value = "/gamemode " + out_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + (parseInt(start_z) + dz + 1).toString() + ",dx=" + (parseInt(dx) + 1).toString + ",dy=65535,dz=0,m=!" + out_mode + command_wl + "]";
 
     input_tip_set(1, "生成成功！");
 }
