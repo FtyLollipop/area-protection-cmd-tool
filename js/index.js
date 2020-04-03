@@ -111,7 +111,7 @@ function input_tip_set(val, str) {
     input_tip_thread = self.setTimeout(function () {
         input_tip.innerHTML = "";
         input_tip.append(document.createElement("br"));
-    }, 2000);
+    }, 3000);
 }
 
 function copy_tip_set(val, str) {
@@ -124,5 +124,5 @@ function copy_tip_set(val, str) {
     copy_tip_thread = self.setTimeout(function () {
         copy_tip.innerHTML = "";
         copy_tip.append(document.createElement("br"));
-    }, 2000);
+    }, 3000);
 }
