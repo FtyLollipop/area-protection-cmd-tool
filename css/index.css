@@ -17,16 +17,18 @@ html, body {
 }
 
 .logo {
-    height:8vh;
+    height:6vh;
     width: 100%;
-    text-align: center;
     font-size: 6vh;
     padding: 2% 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .logo img{
-    height:60%;
-    vertical-align:middle;
+    height:100%;
 }
 
 .form {
@@ -139,7 +141,7 @@ html, body {
 /*竖屏*/
 @media screen and (orientation: portrait) {
     .logo {
-        height:6vh;
+        height:4vh;
         width: 100%;
         text-align: center;
         font-size: 4vh;
