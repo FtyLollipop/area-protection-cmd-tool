@@ -1,5 +1,6 @@
 var coordinates;
 var whitelist;
+var custom;
 var commands;
 var checkbox;
 var calc;
@@ -12,6 +13,7 @@ var copy_tip_thread;
 window.onload = function () {
     coordinates = document.getElementById("input_form").getElementsByTagName("input");
     whitelist = document.getElementById("whitelist");
+    custom = document.getElementById("custom");
     calc = document.getElementById("calc");
     let outputs = document.getElementById("output_list").getElementsByTagName("input");
     commands = [outputs[0], outputs[2], outputs[4], outputs[6], outputs[8]];
@@ -35,6 +37,7 @@ function calc_click() {
     let dx;
     let dz;
     let wl;
+    let cstm="";
     let out_mode = document.input.out_mode.value;
     let in_mode = document.input.in_mode.value;
     let command_wl = "";
@@ -54,16 +57,19 @@ function calc_click() {
 
     //处理白名单
     wl = whitelist.value.split("，").join(",").split(",");
-    if (wl.length !== 0) {
+    if (wl.length !== 0)
         for (let i = 0; i < wl.length; i++)
             if (wl[i] !== "")
                 command_wl += (',name=!"' + wl[i] + '"');
-    }
-    commands[0].value = "/gamemode " + in_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + start_z + ",dx=" + dx + ",dy=65535,dz=" + dz + ",m=!" + in_mode + command_wl + "]";
-    commands[1].value = "/gamemode " + out_mode + " @e[type=player,x=" + (parseInt(start_x) - 1).toString() + ",y=0,z=" + (parseInt(start_z) - 1).toString() + ",dx=0,dy=65535,dz=" + (parseInt(dz) + 1).toString() + ",m=!" + out_mode + command_wl + "]";
-    commands[2].value = "/gamemode " + out_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + (parseInt(start_z) - 1).toString() + ",dx=" + (parseInt(dx) + 1).toString() + ",dy=65535,dz=0,m=!" + out_mode + command_wl + "]";
-    commands[3].value = "/gamemode " + out_mode + " @e[type=player,x=" + (parseInt(start_x) + dx + 1).toString() + ",y=0,z=" + start_z + ",dx=0,dy=65535,dz=" + (parseInt(dz) + 1).toString() + ",m=!" + out_mode + command_wl + "]";
-    commands[4].value = "/gamemode " + out_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + (parseInt(start_z) + dz + 1).toString() + ",dx=" + (parseInt(dx) + 1).toString() + ",dy=65535,dz=0,m=!" + out_mode + command_wl + "]";
+
+    if(custom.value!=="")
+        cstm=","+custom.value;
+
+    commands[0].value = "/gamemode " + in_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + start_z + ",dx=" + dx + ",dy=65535,dz=" + dz + ",m=!" + in_mode + command_wl + cstm + "]";
+    commands[1].value = "/gamemode " + out_mode + " @e[type=player,x=" + (parseInt(start_x) - 1).toString() + ",y=0,z=" + (parseInt(start_z) - 1).toString() + ",dx=0,dy=65535,dz=" + (parseInt(dz) + 1).toString() + ",m=!" + out_mode + command_wl + cstm + "]";
+    commands[2].value = "/gamemode " + out_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + (parseInt(start_z) - 1).toString() + ",dx=" + (parseInt(dx) + 1).toString() + ",dy=65535,dz=0,m=!" + out_mode + command_wl + cstm + "]";
+    commands[3].value = "/gamemode " + out_mode + " @e[type=player,x=" + (parseInt(start_x) + dx + 1).toString() + ",y=0,z=" + start_z + ",dx=0,dy=65535,dz=" + (parseInt(dz) + 1).toString() + ",m=!" + out_mode + command_wl + cstm + "]";
+    commands[4].value = "/gamemode " + out_mode + " @e[type=player,x=" + start_x + ",y=0,z=" + (parseInt(start_z) + dz + 1).toString() + ",dx=" + (parseInt(dx) + 1).toString() + ",dy=65535,dz=0,m=!" + out_mode + command_wl + cstm + "]";
 
     input_tip_set(1, "生成成功！");
 }
@@ -71,7 +77,7 @@ function calc_click() {
 function copy_click(me) {
     let text = me.previousElementSibling;
     if (text.value === "") {
-        text.previousElementSibling.innerHTML.replace(/\s*/g, "")
+        text.previousElementSibling.innerHTML.replace(/\s*/g, "");
         copy_tip_set(0, "无法复制，内容为空！");
         return;
     }
@@ -84,6 +90,7 @@ function reset_click() {
     for (let i = 0; i < 4; i++)
         coordinates[i].value = "";
     whitelist.value = "";
+    custom.value = "";
     for (let i = 0; i < 5; i++)
         commands[i].value = "";
     for (let i = 0; i < 6; i++)

@@ -16,13 +16,14 @@
         <div class="form" id="test">
             <iframe id="rfFrame" name="rfFrame" src="about:blank" style="display:none;"></iframe>
             <form id="input_form" action="" target="rfFrame" name="input">
-                <label for="start_x">起始x坐标: </label><input id="start_x" class="coordinate" type="number" step="1" min="-30000000" max="30000000">
-                <label for="start_z">起始z坐标: </label><input id="start_z" class="coordinate" type="number" step="1" min="-30000000" max="30000000">
+                <label for="start_x">起始x坐标: </label><input id="start_x" class="coordinate" type="number" step="1" min="-30000000" max="30000000" placeholder=" 必填">
+                <label for="start_z">起始z坐标: </label><input id="start_z" class="coordinate" type="number" step="1" min="-30000000" max="30000000" placeholder=" 必填">
                 <br/>
-                <label for="end_x">结束x坐标: </label><input id="end_x" class="coordinate" type="number" step="1" min="-30000000" max="30000000">
-                <label for="end_z">结束z坐标: </label><input id="end_z" class="coordinate" type="number" step="1" min="-30000000" max="30000000">
+                <label for="end_x">结束x坐标: </label><input id="end_x" class="coordinate" type="number" step="1" min="-30000000" max="30000000" placeholder=" 必填">
+                <label for="end_z">结束z坐标: </label><input id="end_z" class="coordinate" type="number" step="1" min="-30000000" max="30000000" placeholder=" 必填">
                 <br/>
-                <label for="whitelist">白名单(逗号隔开): </label><input class="whitelist" id="whitelist" type="text">
+                <label for="whitelist">玩家ID白名单(逗号隔开): </label><input class="whitelist" id="whitelist" type="text" placeholder=" 选填"><br/>
+                <label for="custom">其他可选参数(专业人员): </label><input class="whitelist" id="custom" type="text" placeholder=" 不懂请勿填写">
                 <br/>
                 <label>圈外游戏模式: </label>
                 <label>
@@ -72,8 +73,12 @@
         <hr class="a_hr">
         <p class="top_text">说明</p>
         <div class="tips">
-            *生成的命令只适用于基岩版*<br/>
-            坐标必填，白名单是选填的，填入玩家ID即可。将生成的命令分别复制到5个激活的循环型命令方块中并保证任何人接近领地边界时这些命令方块可以被加载即可。<br/><br/>
+            注意：生成的命令只适用于基岩版。<br/>
+            1. 填写后将生成的命令分别复制到5个激活的循环型命令方块中，并保证任何人接近领地边界时这些命令方块可以被加载即可。<br/>
+            2. 可以配合/tickingarea将这些命令方块置于常加载区域中来保证始终被加载。<br/>
+            3. 可选参数可供专业人员添加更多目标选择器参数，本生成器不对其有效性进行检查，不懂请勿填写，否则会造成生成的命令语法错误。<br/><br/>
+        </div>
+        <div class="about">
             <h4>作者：FtyLollipop</h4>
             <h4>↓联系方式↓</h4>
             QQ：1161837359<br/>
