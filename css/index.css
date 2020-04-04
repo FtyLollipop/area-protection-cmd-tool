@@ -36,7 +36,7 @@ html, body {
     padding: 0;
     text-align: center;
     font-size: 2vh;
-    margin: 3% auto auto auto;
+    margin: 4% auto auto auto;
 }
 
 .coordinate {
@@ -135,7 +135,9 @@ html, body {
 
 /*横屏*/
 @media screen and (orientation: landscape) {
-
+    .mobile{
+        display:none;
+    }
 }
 
 /*竖屏*/
@@ -146,7 +148,7 @@ html, body {
         text-align: center;
         font-size: 4vh;
         line-height: 4vh;
-        padding: 2% 0 0 0;
+        padding: 3% 0 0 0;
     }
 
     .form {
@@ -154,11 +156,13 @@ html, body {
     }
 
     .coordinate {
+        width: 50%;
         font-size: 2.2vh;
         margin: 1vh;
     }
 
     .whitelist {
+        width: 75%;
         font-size: 2.2vh;
         margin: 1vh;
     }
